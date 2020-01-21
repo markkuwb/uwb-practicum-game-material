@@ -9,7 +9,7 @@ export default class GameInterface extends React.Component {
 
     render() {
         return (
-            <div id="game-interface"><button id="newgame">New Game</button></div>
+            <div id="game-interface"><button id="newgame" onClick={this.props.onNewGame}>New Game</button></div>
         )
     }
 }
