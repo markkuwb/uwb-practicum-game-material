@@ -4,6 +4,7 @@ import GameCell from './GameCell';
 import GameMessage from './GameMessage';
 import GameInterface from './GameInterface';
 import {GAME_STATES} from './GameState';
+import {Paper} from '@material-ui/core';
 
 // Game - Drives the entire game. Implemented as React Class Component
 export default class Game extends React.Component {
@@ -96,13 +97,13 @@ export default class Game extends React.Component {
         return (
             <div id="game">
                 <GameTitle/>
-                <div id="game-board">
+                <Paper id="game-board" elevation={3}>
                     {this.state.board.map((value,i) => {
                         return (
                             <GameCell gameState={this.state.gameState} key={i} node={i} value={value} onChange={this.handleCellChange}/>
                         );
                     })}
-                </div>
+                </Paper>
                 <GameMessage gameState={this.state.gameState} player={this.state.player} move={this.state.move}/>
                 <GameInterface onNewGame={this.resetGame}/>
             </div>

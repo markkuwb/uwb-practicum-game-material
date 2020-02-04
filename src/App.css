@@ -41,7 +41,7 @@
 #game-board {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #DDDDDD;
+  background-color: lightblue;
   padding: 10px;
   margin: 50px;
 }
